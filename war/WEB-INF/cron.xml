@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  
+  <cron>
+    <url>/cronaction.do</url>
+    <description>Refresh quote value every minute</description>
+    <schedule>every 3 minutes from 09:30 to 15:30</schedule>
+    <timezone>Asia/Kolkata</timezone>
+    
+  </cron>
+  
+</cronentries>

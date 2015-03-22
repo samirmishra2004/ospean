@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-api-1.0-sdk-1.9.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-api-labs-1.9.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/appengine-jsr107cache-1.9.17.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-lang-2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/datanucleus-appengine-1.0.10.final.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/datanucleus-core-1.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/datanucleus-jpa-1.1.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/google_sql.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/jdo2-api-2.3-eb.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/libservice.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.springframework.jdbc-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.springframework.security.config-3.1.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.springframework.security.core-3.1.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.springframework.security.web-3.1.2.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/org.springframework.transaction-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-aop-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-beans-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-context-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-context-support-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-core-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-expression-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-orm-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-web-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/spring-webmvc-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

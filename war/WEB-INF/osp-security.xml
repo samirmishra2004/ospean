@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://www.springframework.org/schema/security
+                           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+  <!-- bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiName" value="OSPDataSource"/>
+	</bean-->	
+	
+	
+	
+	<bean id="userService" class="com.cognizant.osp.service.impl.UserServiceImpl">
+     <property name="userDAO"  ref="userDAO" /> 
+	</bean>
+  
+  <bean id="userDAO" class="com.cognizant.osp.dao.impl.UserDAOImpl">
+    <!-- property name="dataSource"  ref="dataSource" /--> 
+	</bean>
+
+   <security:http pattern="/css/*" security="none"/>
+    <security:http pattern="/images/*" security="none"/>
+    <security:http pattern="/js/*" security="none"/>
+    <security:http auto-config="true" use-expressions="true"> 
+        <security:access-denied-handler error-page="/accessdenied.do" />
+        <security:intercept-url pattern="/accessdenied*" access="permitAll"/> 
+        <security:intercept-url pattern="/login*" access="permitAll"/>          
+        <security:intercept-url pattern="/logout*" access="permitAll"/>
+        <security:intercept-url pattern="/cronaction*" access="permitAll"/>
+        <security:intercept-url pattern="/authFailed*" access="permitAll"/> 
+        <security:intercept-url pattern="/welcome*" access="isAuthenticated()"/> 
+        <security:intercept-url pattern="/admin/**" access="hasRole('ADMIN')"/>        
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ADMIN')"></security:intercept-url>
+        <security:form-login  login-page="/login.do" 
+            default-target-url="/welcome.do"  authentication-failure-url="/authFailed.do"
+            username-parameter="username" password-parameter="password"/>
+        
+        
+        <security:logout invalidate-session="true" delete-cookies="true" logout-url="/logout_process" 
+            logout-success-url="/login.do"></security:logout>     
+        <security:http-basic />
+    </security:http>
+   
+
+   <security:authentication-manager alias="authenticationManager">
+    <security:authentication-provider user-service-ref="userDAO"></security:authentication-provider>
+</security:authentication-manager>
+
+</beans>
